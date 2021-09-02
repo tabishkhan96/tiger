@@ -1,0 +1,26 @@
+{% extends 'myapp/base.html'%}
+{%block a%}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+<h1> Add a new student in form</h1>
+<form   method="POST" enctype="multipart/form-data" >
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>save</button>
+    </p>
+
+</form>
+</body>
+</html>
+
+{%endblock%}
